@@ -6,17 +6,17 @@ import "bootstrap"
 
 const results = document.querySelector('#results');
 
-fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=afde1f7406fd42ba8abbd902835cf326")
+fetch("https://newsdata.io/api/1/news?apikey=pub_310596e38287f14f437a78633dc5905072b8f&q=tech&country=fr&language=fr&category=technology ")
   .then(response => response.json())
   .then((data) => {
     console.log(data)
-    data.articles.forEach((result) => {
+    data.results.forEach((result) => {
       const article =
       `<div>
         <div style="width:80%;">
-          <img src="${result.urlToImage}" class="card-img-top" />
+          <img src="${result.image_url}" class="card-img-top" />
           <div>
-            <h6>${result.title} </h6>
+            <h6>${result.title}</h6>
             <p>${result.description}</p>
           </div>
         </div>
