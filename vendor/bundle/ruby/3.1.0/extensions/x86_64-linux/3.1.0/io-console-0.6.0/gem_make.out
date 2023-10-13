@@ -1,0 +1,19 @@
+current directory: /root/code/emmvs/colibri/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+/root/.rbenv/versions/3.1.2/bin/ruby -I /root/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20231013-2015-40g3dc.rb extconf.rb
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: /root/code/emmvs/colibri/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= clean
+
+current directory: /root/code/emmvs/colibri/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\=
+compiling console.c
+linking shared-object io/console.so
+
+current directory: /root/code/emmvs/colibri/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 console.so ./.gem.20231013-2015-r5xmfn/io
