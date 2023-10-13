@@ -6,7 +6,7 @@ import "bootstrap"
 
 const results = document.querySelector('#results');
 
-fetch("https://newsdata.io/api/1/news?apikey=pub_310596e38287f14f437a78633dc5905072b8f&q=tech&country=fr&language=fr&category=technology ")
+fetch(" https://newsdata.io/api/1/news?apikey=pub_310596e38287f14f437a78633dc5905072b8f&language=en&category=top")
   .then(response => response.json())
   .then((data) => {
     console.log(data)

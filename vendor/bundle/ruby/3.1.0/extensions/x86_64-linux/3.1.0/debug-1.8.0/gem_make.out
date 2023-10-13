@@ -1,0 +1,16 @@
+current directory: /root/code/emmvs/colibri/vendor/bundle/ruby/3.1.0/gems/debug-1.8.0/ext/debug
+/root/.rbenv/versions/3.1.2/bin/ruby -I /root/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20231013-2015-eynurq.rb extconf.rb
+creating Makefile
+
+current directory: /root/code/emmvs/colibri/vendor/bundle/ruby/3.1.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= clean
+
+current directory: /root/code/emmvs/colibri/vendor/bundle/ruby/3.1.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /root/code/emmvs/colibri/vendor/bundle/ruby/3.1.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20231013-2015-872ls8/debug
