@@ -13,7 +13,7 @@ fetch(" https://newsdata.io/api/1/news?apikey=pub_310596e38287f14f437a78633dc590
     data.results.forEach((result) => {
       const article =
       `<div>
-        <div style="width:80%;">
+        <div style="width:40%;">
           <img src="${result.image_url}" class="card-img-top" />
           <div>
             <h6>${result.title}</h6>
