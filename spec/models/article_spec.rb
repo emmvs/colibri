@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  let(:topic) { Topic.create(name: "Tech")}
-  let(:language) { Language.create(name: "English")}
+  let(:topic) { create(:topic) }
+  let(:language) { create(:language) }
 
   it "is valid with valid attributes" do
     article = Article.new(title: "Test", content: "Test content", source:"test source", topic: topic, language: language)
@@ -23,5 +23,4 @@ RSpec.describe Article, type: :model do
     article = Article.new(title: "test", content: "test content", source: nil, topic: topic, language: language)
     expect(article).to_not be_valid
   end
-
 end
