@@ -1,6 +1,9 @@
 class Article < ApplicationRecord
   belongs_to :language
   belongs_to :topic
-  belongs_to :user
   has_many :favorites
+
+  validates :title, presence: true
+  validates :content, presence: true
+  validates :source, presence: true
 end
