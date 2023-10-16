@@ -1,26 +1,19 @@
 require 'rails_helper'
+require 'spec_helper'
+require 'shoulda/matchers'
 
 RSpec.describe Article, type: :model do
   let(:topic) { create(:topic) }
   let(:language) { create(:language) }
 
-  it "is valid with valid attributes" do
-    article = Article.new(title: "Test", content: "Test content", source:"test source", topic: topic, language: language)
-    expect(article).to be_valid
+  context 'validation' do
+    it { should validate_presence_of(:title) }
+    it { should validate_presence_of(:content) }
+    it { should validate_presence_of(:source) }
   end
 
-  it "is not valid without a title" do
-    article = Article.new(title: nil, content: "Test content", source:"test source", topic: topic, language: language)
-    expect(article).to_not be_valid
-  end
-
-  it "is not valid without a content" do
-    article = Article.new(title: "test", content: nil, source:"test source", topic: topic, language: language)
-    expect(article).to_not be_valid
-  end
-
-  it "is not valid without a source" do
-    article = Article.new(title: "test", content: "test content", source: nil, topic: topic, language: language)
-    expect(article).to_not be_valid
+  context 'associations' do
+    it { should belong_to(:topic) }
+    it { should belong_to(:language) }
   end
 end
