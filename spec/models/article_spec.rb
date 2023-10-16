@@ -16,10 +16,12 @@ RSpec.describe Article, type: :model do
 
   it "is not valid without a content" do
     article = Article.new(title: "test", content: nil, source:"test source", topic: topic, language: language)
+    expect(article).to_not be_valid
   end
 
   it "is not valid without a source" do
     article = Article.new(title: "test", content: "test content", source: nil, topic: topic, language: language)
+    expect(article).to_not be_valid
   end
 
 end
